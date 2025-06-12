@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import styles from './Portrait.module.css'
 
 export const Portrait: FC = () => {
