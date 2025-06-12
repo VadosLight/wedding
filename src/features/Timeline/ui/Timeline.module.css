@@ -1,7 +1,7 @@
 .timeline {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   background-color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .title {
@@ -40,6 +40,7 @@
   color: #000;
   padding: 0.5rem 1rem;
   border-right: 2px solid #000;
+  font-family: "Times New Roman", serif;
 }
 
 .content {
@@ -82,4 +83,6 @@
   .description {
     font-size: 1.2rem;
   }
+
+
 } 

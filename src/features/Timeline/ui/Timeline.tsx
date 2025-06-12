@@ -7,27 +7,45 @@ type TimelineEvent = {
   description: string
 }
 
+const nbsp = '\u00A0'
+const hyphen = '\u2011'
+
 const events: TimelineEvent[] = [
   {
-    time: '17:00',
-    title: 'Встреча гостей',
-    description: 'Приветственные напитки и закуски'
+    time: '15:00',
+    title: `Роспись ЗАГС${nbsp}№${nbsp}1${nbsp}`,
+    description: `Санкт-Петербург, Английская набережная,${nbsp}28`
+  },
+  {
+    time: '16:00',
+    title: 'Выезд на площадку',
+    description: 'Vinity Amore'
   },
   {
     time: '17:30',
-    title: 'Церемония',
-    description: 'Торжественная церемония бракосочетания'
+    title: 'Фуршет',
+    description: 'Перекус для поднятия боевого духа'
+  },
+  {
+    time: '18:00',
+    title: 'Выездная регистрация',
+    description: 'Подготовьтесь плакать'
   },
   {
     time: '18:30',
-    title: 'Праздничный ужин',
-    description: 'Изысканное меню и развлекательная программа'
+    title: 'Начало банкета',
+    description: 'Поехали'
   },
   {
     time: '22:00',
     title: 'Торт',
-    description: 'Десерт и танцы'
-  }
+    description: 'Сладкие моменты'
+  },
+  {
+    time: '23:30',
+    title: 'Конец мероприятия',
+    description: `Автобус в Санкт${hyphen}Петербург`
+  } 
 ]
 
 export const Timeline: FC = () => {
@@ -35,8 +53,8 @@ export const Timeline: FC = () => {
     <section className={styles.timeline}>
       <h2 className={styles.title}>Расписание</h2>
       <div className={styles.eventsGrid}>
-        {events.map((event, index) => (
-          <div key={index} className={styles.event}>
+        {events.map((event) => (
+          <div key={event.time} className={styles.event}>
             <div className={styles.time}>{event.time}</div>
             <div className={styles.content}>
               <h3 className={styles.eventTitle}>{event.title}</h3>

@@ -7,17 +7,40 @@ type DressCodeItem = {
   image: string
 }
 
-const dressCodeItems: DressCodeItem[] = [
+const colors = [
   {
-    title: 'Для дам',
-    description: 'Вечерние платья в пастельных тонах',
-    image: '/dress-code-women.jpg'
+    name: 'Зеленый',
+    color: '#1f3a26'
   },
   {
-    title: 'Для господ',
-    description: 'Классический костюм темных оттенков',
-    image: '/dress-code-men.jpg'
-  }
+    name: 'Черный',
+    color: '#0d0f0d'
+  },
+  {
+    name: 'Серый',
+    color: '#636363'
+  },
+  {
+    name: 'Зеленый светлый',
+    color: '#7b896f'
+  },
+  {
+    name: 'Синий',
+    color: '#13273f'
+  },
+]
+
+const dressCodeItems: DressCodeItem[] = [
+  {
+    title: 'Пожалуйста, приходите в красивой одежде, которая соотвествует торжественному настроению.',
+    description: 'Мы будем рады, если вы поддержите цветовую палитру нашей свадьбы.',
+    image: ''
+  },
+  // {
+  //   title: 'Для господ',
+  //   description: 'Классический костюм темных оттенков',
+  //   image: '/dress-code-men.jpg'
+  // }
 ]
 
 export const DressCode: FC = () => {
@@ -28,11 +51,16 @@ export const DressCode: FC = () => {
         {dressCodeItems.map((item, index) => (
           <div key={index} className={styles.item}>
             <div className={styles.imageContainer}>
-              <img 
+              <div className={styles.colors}>
+                {colors.map((color) => (
+                  <div key={color.name} className={styles.color} style={{ backgroundColor: color.color }}></div>
+                ))}
+              </div>
+              {/* <img 
                 src={item.image} 
                 alt={item.title} 
                 className={styles.image}
-              />
+              /> */}
             </div>
             <div className={styles.content}>
               <h3 className={styles.itemTitle}>{item.title}</h3>

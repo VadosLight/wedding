@@ -27,3 +27,14 @@ img {
   display: block;
 }
 
+.divider {
+  text-align: center;
+  padding: 2rem 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .divider {
+    padding: 5rem 2rem;
+  }
+}

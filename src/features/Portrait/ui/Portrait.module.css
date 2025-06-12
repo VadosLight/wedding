@@ -1,24 +1,26 @@
 .portrait {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  /* padding: 2rem; */
   background-color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .imageContainer {
+  position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
   overflow: hidden;
-  border: 1px solid #000;
+  /* clip-path: polygon(0% 91%, 4% 89%, 7% 91%, 9% 93%, 12% 93%, 14% 90%, 17% 90%, 21% 92%, 27% 89%, 35% 88%, 39% 88%, 42% 86%, 53% 84%, 62% 80%, 70% 77%, 73% 78%, 75% 75%, 80% 74%, 88% 75%, 92% 80%, 94% 75%, 96% 70%, 99% 71%, 100% 67%, 100% 0, 0 0); */
+  /* border: 1px solid #000; */
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+  object-fit: none;
+  /* filter: grayscale(100%); */
   transition: transform 0.3s ease;
 }
 
@@ -28,18 +30,39 @@
 
 .textContent {
   text-align: center;
+  padding: 1rem 1.5rem;
 }
 
 .names {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 1rem;
   color: #000;
+  line-height: 1.1;
+}
+
+.ourNames {
+  position: absolute;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  z-index: 1;
+  top: 10%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.54);
+
+  /* font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
 }
 
 .date {
   font-size: 1.5rem;
   color: #666;
+  padding-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -55,4 +78,4 @@
   .date {
     font-size: 2rem;
   }
-} 
+}
