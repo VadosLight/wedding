@@ -75,12 +75,13 @@
 .colors {
   display: grid;
   grid-template-columns: repeat(3, 1fr) 70px;
-  grid-template-rows: repeat(4, 60px);
+  grid-template-rows: repeat(5, 50px);
   grid-template-areas:
     "e e e a"
     "e e e a"
     "d d d a"
-    "b b b a";
+    "b b b a"
+    "c c c a";
   margin: 0 auto;
   padding: 16px;
   gap: 1px;
