@@ -17,6 +17,7 @@
   height: 100%;
   object-fit: none;
   transition: transform 0.3s ease;
+  filter: brightness(1.1)
 }
 
 .image:hover {
@@ -50,7 +51,7 @@
   left: 65%;
   transform: translate(-50%, -50%);
   color: white;
-  text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.54);
+  text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 .city {

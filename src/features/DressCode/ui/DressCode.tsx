@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import styles from './DressCode.module.css'
+import terra from './terra.png'
 
 type DressCodeItem = {
   title: string
@@ -7,33 +8,33 @@ type DressCodeItem = {
   image: string
 }
 
-const colors = [
-  {
-    name: 'Зеленый',
-    color: '#1f3a26',
-    area: 'a'
-  },
-  {
-    name: 'Черный',
-    color: '#0d0f0d',
-    area: 'b'
-  },
-  {
-    name: 'Серый',
-    color: '#636363',
-    area: 'c'
-  },
-  {
-    name: 'Зеленый светлый',
-    color: '#7b896f',
-    area: 'd'
-  },
-  {
-    name: 'Синий',
-    color: '#13273f',
-    area: 'e'
-  },
-]
+// const colors = [
+//   {
+//     name: 'Зеленый',
+//     color: '#1f3a26',
+//     area: 'a'
+//   },
+//   {
+//     name: 'Черный',
+//     color: '#0d0f0d',
+//     area: 'b'
+//   },
+//   {
+//     name: 'Серый',
+//     color: '#636363',
+//     area: 'c'
+//   },
+//   {
+//     name: 'Зеленый светлый',
+//     color: '#7b896f',
+//     area: 'd'
+//   },
+//   {
+//     name: 'Синий',
+//     color: '#13273f',
+//     area: 'e'
+//   },
+// ]
 
 const dressCodeItems: DressCodeItem[] = [
   {
@@ -56,18 +57,18 @@ export const DressCode: FC = () => {
         {dressCodeItems.map((item, index) => (
           <div key={index} className={styles.item}>
             <div className={styles.imageContainer}>
-              <div className={styles.colors}>
+              {/* <div className={styles.colors}>
                 {colors.map((color) => (
                   <div key={color.name}
                     className={styles.color}
                     style={{ backgroundColor: color.color, gridArea: color.area }}></div>
                 ))}
-              </div>
-              {/* <img 
-                src={item.image} 
+              </div> */}
+              <img 
+                src={terra} 
                 alt={item.title} 
                 className={styles.image}
-              /> */}
+              />
             </div>
             <div className={styles.content}>
               <h3 className={styles.itemTitle}>{item.title}</h3>
