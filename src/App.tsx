@@ -60,7 +60,7 @@ function App() {
 
   return (
     <main>
-      <Stars />
+      {/* <Stars /> */}
       <Portrait />
       <Divider />
       <Location />
