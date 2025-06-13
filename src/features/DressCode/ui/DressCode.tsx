@@ -10,23 +10,28 @@ type DressCodeItem = {
 const colors = [
   {
     name: 'Зеленый',
-    color: '#1f3a26'
+    color: '#1f3a26',
+    area: 'a'
   },
   {
     name: 'Черный',
-    color: '#0d0f0d'
+    color: '#0d0f0d',
+    area: 'b'
   },
   {
     name: 'Серый',
-    color: '#636363'
+    color: '#636363',
+    area: 'c'
   },
   {
     name: 'Зеленый светлый',
-    color: '#7b896f'
+    color: '#7b896f',
+    area: 'd'
   },
   {
     name: 'Синий',
-    color: '#13273f'
+    color: '#13273f',
+    area: 'e'
   },
 ]
 
@@ -53,7 +58,9 @@ export const DressCode: FC = () => {
             <div className={styles.imageContainer}>
               <div className={styles.colors}>
                 {colors.map((color) => (
-                  <div key={color.name} className={styles.color} style={{ backgroundColor: color.color }}></div>
+                  <div key={color.name}
+                    className={styles.color}
+                    style={{ backgroundColor: color.color, gridArea: color.area }}></div>
                 ))}
               </div>
               {/* <img 

@@ -33,9 +33,15 @@ export function guessGender(name: string): 'male' | 'female' | 'unknown' {
 }
 
 const guests = [
+  /** Сторона вадима */
+  ["Мама"],
+  ["Сава", "Рада"],
+  ["Женя", "Софа"],
+  [""],
+  
+  /** Сторона Кристины */
   ["Мама", "Папа"],
-  ["Никита"],
-  ["Кристина"],
+  
 ] as const
 
 const getGuestInvitation = (id: string | null) => {

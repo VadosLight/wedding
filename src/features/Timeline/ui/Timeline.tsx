@@ -44,7 +44,7 @@ const events: TimelineEvent[] = [
   {
     time: '23:30',
     title: 'Конец мероприятия',
-    description: `Автобус в Санкт${hyphen}Петербург`
+    description: `Автобус в Гатчину и Санкт${hyphen}Петербург`
   } 
 ]
 
