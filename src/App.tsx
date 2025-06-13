@@ -70,7 +70,6 @@ function App() {
       <DressCode />
       <Divider />
       <Questionnaire />
-      <Divider />
     </main>
   )
 }
