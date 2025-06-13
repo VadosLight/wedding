@@ -85,7 +85,7 @@ const getGuestInvitation = (id: string | null) => {
     return `Дорогая ${pair[0]}`
   }
 
-  return `Дорогие ${pair[0]} и${nbsp}${pair[1]}`
+  return `Дорогие ${pair[0]} и ${pair[1]}`
 
 }
 
@@ -111,8 +111,8 @@ export const Portrait: FC = () => {
           событие{nbsp}-{nbsp}день свадьбы!
           Мы приглашаем вас разделить с нами этот особенный день!
         </h2>
-        <p className={styles.city}>Санкт-Петербург</p>
-        <p className={styles.date}>15 сентября 2025</p>
+        <p className={styles.city}>15 сентября 2025</p>
+        <p className={styles.date}>Санкт-Петербург</p>
       </div>
     </section>
   )

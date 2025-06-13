@@ -10,7 +10,7 @@ const Divider = () => {
   return <p className={styles.divider}>________________________</p>
 }
 
-function Stars() {
+export function Stars() {
   const ref = useRef<HTMLDivElement>(null)
   const starCount = 130
 
