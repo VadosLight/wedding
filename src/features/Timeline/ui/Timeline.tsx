@@ -1,14 +1,13 @@
 import type { FC } from 'react'
 import styles from './Timeline.module.css'
+import { nbsp } from '../../../shared/nbsp'
+import { hyphen } from '../../../shared/hyphen'
 
 type TimelineEvent = {
   time: string
   title: string
   description: string
 }
-
-const nbsp = '\u00A0'
-const hyphen = '\u2011'
 
 const events: TimelineEvent[] = [
   {

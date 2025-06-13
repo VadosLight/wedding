@@ -1,38 +1,10 @@
 import type { FC } from 'react'
 import styles from './Portrait.module.css'
 import portrait from './portrait.jpg'
+import { guessGender } from '../../../shared/guessGender'
+import { useQueryParams } from '../../../shared/useQueryParams'
+import { nbsp } from '../../../shared/nbsp'
 
-import { useMemo } from 'react';
-
-export const useQueryParams = (): URLSearchParams => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  return useMemo(() => new URLSearchParams(window.location.search), [window.location.search]);
-};
-
-export function guessGender(name: string): 'male' | 'female' | 'unknown' {
-  const lowerName = name.trim().toLowerCase();
-
-  const femaleEndings = ['а', 'я', 'ия', 'льда', 'иня', 'ына', 'ю'];
-  const maleEndings = ['й', 'н', 'р', 'в', 'д', 'м', 'т', 'л', 'г', 'б', 'п', "никита"];
-
-  if (!name) return 'unknown';
-
-  // Проверим на мужские окончания
-  if (maleEndings.some(ending => lowerName.endsWith(ending))) {
-    return 'male';
-  }
-
-  // Проверим на женские окончания
-  if (femaleEndings.some(ending => lowerName.endsWith(ending))) {
-    return 'female';
-  }
-
-
-
-  return 'unknown';
-}
-
-const nbsp = "\u00A0"
 
 
 const guests = [
@@ -48,7 +20,7 @@ const guests = [
   ["Алена", "Андрей"], // 8
   ["Вика", "Кирилл"], // 9
   ["Сергей"], // 10
-  
+
   /** Сторона Кристины */
   ["Мама", "Папа"], // 11
   ["Ева"], // 12
