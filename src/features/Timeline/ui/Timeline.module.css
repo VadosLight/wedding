@@ -1,6 +1,6 @@
 .timeline {
   padding: 1rem 2rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   /* min-height: 100vh; */
   user-select: none;
 }
@@ -28,6 +28,7 @@
   padding: 1.5rem;
   border: 1px solid #ddd;
   transition: transform 0.3s ease;
+  background-color: #fff;
 }
 
 .event:hover {
