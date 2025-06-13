@@ -32,6 +32,9 @@ export function guessGender(name: string): 'male' | 'female' | 'unknown' {
   return 'unknown';
 }
 
+const nbsp = "\u00A0"
+
+
 const guests = [
   /** Сторона Вадима */
   ["Мама"], // 0
@@ -49,7 +52,7 @@ const guests = [
   /** Сторона Кристины */
   ["Мама", "Папа"], // 11
   ["Ева"], // 12
-  ["Светлана", "Анатолий"], // 13
+  [`Светлана${nbsp}Ивановна`, `Анатолий${nbsp}Петрович`], // 13
   ["Диана", "Егор"], // 14
   ["Диана", "Александр"], // 15
   ["Леся", "Лев"], // 16
@@ -61,7 +64,7 @@ const guests = [
   ["Марина", "Гриша"], // 22
   ["Марина", "Миша"], // 23
 
-  ["Вера", "Геннадий"], // 24
+  [`Вера${nbsp}Евгениевна`, `Геннадий${nbsp}Борисович`], // 24
 
 ] as const satisfies Array<[string] | [string, string]>
 
@@ -82,11 +85,10 @@ const getGuestInvitation = (id: string | null) => {
     return `Дорогая ${pair[0]}`
   }
 
-  return `Дорогие ${pair.join(`${nbsp}и${nbsp}`)}`
+  return `Дорогие ${pair[0]} и${nbsp}${pair[1]}`
 
 }
 
-const nbsp = "\u00A0"
 
 export const Portrait: FC = () => {
   const queryParams = useQueryParams()
