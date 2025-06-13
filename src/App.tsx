@@ -48,7 +48,16 @@ function Stars() {
   return <div className={styles['main-stars']} ref={ref} />
 }
 
+
 function App() {
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 300)
+  }, [])
+
+
   return (
     <main>
       <Stars />
