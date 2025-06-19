@@ -38,6 +38,9 @@ const guests = [
 
   [`Вера${nbsp}Евгениевна`, `Геннадий${nbsp}Борисович`], // 24
   [`Лидия`], // 25
+  ['Анна', 'Артур'], // 26
+  ['Марк', 'Саша'], // 27
+  
 
 ] as const satisfies Array<[string] | [string, string]>
 
