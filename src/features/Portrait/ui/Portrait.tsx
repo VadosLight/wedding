@@ -4,6 +4,7 @@ import portrait from './portrait.jpg'
 import { guessGender } from '../../../shared/guessGender'
 import { useQueryParams } from '../../../shared/useQueryParams'
 import { nbsp } from '../../../shared/nbsp'
+import { Image } from '../../../shared/Image/Image'
 
 
 
@@ -73,10 +74,12 @@ export const Portrait: FC = () => {
   return (
     <section className={styles.portrait}>
       <div className={styles.imageContainer}>
-        <img
+        <Image
           src={portrait}
           alt="Портрет пары"
           className={styles.image}
+          priority
+
         />
         <h1 className={styles.ourNames}>Кристина {nbsp}{nbsp}&{nbsp}Вадим</h1>
       </div>

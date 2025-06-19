@@ -3,6 +3,7 @@ import styles from './Location.module.css'
 import first from './1.jpg'
 import second from './2.jpg'
 import third from './3.jpg'
+import { Image } from '../../../shared/Image/Image'
 // import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
 
 // const ZAGS_COORDINATES = [59.933961, 30.293878];
@@ -26,9 +27,9 @@ import third from './3.jpg'
 
 const Preview = () => {
   return <div className={styles.preview}>
-    <img src={second} className={styles.previewImage} alt="Preview" />
-    <img src={first} className={styles.previewImage} alt="Preview" />
-    <img src={third} className={styles.previewImage} alt="Preview" />
+    <Image src={second} className={styles.previewImage} alt="Preview" />
+    <Image src={first} className={styles.previewImage} alt="Preview" />
+    <Image src={third} className={styles.previewImage} alt="Preview" />
   </div>
 }
 
