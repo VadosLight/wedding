@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import styles from './Portrait.module.css'
-import portrait from './portrait.jpg'
+import portrait from './portrait.jpg?imagetools'
+import portraitPreview from './portrait.jpg?quality=20&imagetools'
 import { guessGender } from '../../../shared/guessGender'
 import { useQueryParams } from '../../../shared/useQueryParams'
 import { nbsp } from '../../../shared/nbsp'
@@ -76,9 +77,10 @@ export const Portrait: FC = () => {
       <div className={styles.imageContainer}>
         <Image
           src={portrait}
+          previewSrc={portraitPreview}
           alt="Портрет пары"
           className={styles.image}
-          priority
+          // priority
 
         />
         <h1 className={styles.ourNames}>Кристина {nbsp}{nbsp}&{nbsp}Вадим</h1>
