@@ -46,31 +46,42 @@ const guests = [
 
 ] as const satisfies Array<[string] | [string, string]>
 
-const getGuestInvitation = (id: string | null) => {
+const getGuestInvitation = (id: string | null, guestParam?: string | null) => {
+  if (guestParam) {
+    // Ожидаем guestParam в формате "Имя" или "Имя1,Имя2"
+    const names = guestParam.split(',').map((n) => n.trim()).filter(Boolean)
+    if (names.length === 1) {
+      const gender = guessGender(names[0])
+      if (gender === 'male') {
+        return `Дорогой ${names[0]}`
+      }
+      return `Дорогая ${names[0]}`
+    }
+    if (names.length === 2) {
+      return `Дорогие ${names[0]} и ${names[1]}`
+    }
+    if (names.length > 2) {
+      return `Дорогие ${names.join(', ')}`
+    }
+  }
   const pair = guests[Number(id)]
-
   if (id === null || !pair) {
     return "Дорогие гости"
   }
-
-
   if (pair.length === 1) {
     const gender = guessGender(pair[0])
-
     if (gender === 'male') {
       return `Дорогой ${pair[0]}`
     }
     return `Дорогая ${pair[0]}`
   }
-
   return `Дорогие ${pair[0]} и ${pair[1]}`
-
 }
-
 
 export const Portrait: FC = () => {
   const queryParams = useQueryParams()
   const id = queryParams.get('id')
+  const guestParam = queryParams.get('guest')
 
   return (
     <section className={styles.portrait}>
@@ -86,7 +97,7 @@ export const Portrait: FC = () => {
         <h1 className={styles.ourNames}>Кристина {nbsp}{nbsp}&{nbsp}Вадим</h1>
       </div>
       <div className={styles.textContent}>
-        <h1 className={styles.names}>{getGuestInvitation(id)}</h1>
+        <h1 className={styles.names}>{getGuestInvitation(id, guestParam)}</h1>
         <h2 className={styles.subTitle}>
           В нашей жизни состоится важное и{nbsp}радостное
           событие{nbsp}-{nbsp}день свадьбы!
