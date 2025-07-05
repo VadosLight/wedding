@@ -1,5 +1,5 @@
 import type { ColorPalette, DressCodeItem } from './types'
-import terra from '../ui/terra.png'
+import terra from '../ui/terra.png?quality=50&imagetools'
 
 export const COLORS: ColorPalette[] = [
   {

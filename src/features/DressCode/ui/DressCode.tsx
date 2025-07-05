@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import styles from './DressCode.module.css'
-import terra from './terra.png'
+import terra from './terra.png?quality=50&imagetools'
 import { Image } from '../../../shared/Image/Image'
 
 const dressCodeItem = {

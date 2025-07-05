@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import styles from './Location.module.css'
-import first from './1.jpg'
-import second from './2.jpg'
-import third from './3.jpg'
+import first from './1.jpg?quality=50&imagetools'
+import second from './2.jpg?quality=50&imagetools'
+import third from './3.jpg?quality=50&imagetools'
 import { Image } from '../../../shared/Image/Image'
 // import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
 
